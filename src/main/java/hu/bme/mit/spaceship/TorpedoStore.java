@@ -29,6 +29,13 @@ public class TorpedoStore {
     }
   }
 
+  /**
+   * Fires the specified number of torpedoes.
+   *
+   * @param numberOfTorpedos the number of torpedoes to fire
+   * @return true if firing was successful
+   * @throws IllegalArgumentException if numberOfTorpedos is less than 1 or exceeds the available torpedoCount
+   */
   public boolean fire(int numberOfTorpedos){
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
       throw new IllegalArgumentException("numberOfTorpedos");
